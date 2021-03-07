@@ -1,0 +1,25 @@
+POST http://localhost:8080/api/v1/person
+Content-Type: application/json
+
+{
+  "name": "James Bond"
+}
+
+###
+
+GET http://localhost:8080/api/v1/person
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/api/v1/person/0c04f945-08a5-4cfa-9b26-d10c758
+Content-Type: application/json
+
+###
+
+PUT http://localhost:8080/api/v1/person/fd92f93f-2d2a-42ea-954e-6391efd17fca
+Content-Type: application/json
+
+{
+  "name": "James"
+}
