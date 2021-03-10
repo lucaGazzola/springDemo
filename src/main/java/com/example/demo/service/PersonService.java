@@ -21,9 +21,9 @@ public class PersonService
     this.personDao = personDao;
   }
 
-  public int addPerson(Person person)
+  public void addPerson(Person person)
   {
-    return personDao.insertPerson(person);
+    personDao.insertPerson(person);
   }
 
   public List<Person> getAllPeople()

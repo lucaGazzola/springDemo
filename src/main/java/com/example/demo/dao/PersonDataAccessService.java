@@ -24,9 +24,9 @@ public class PersonDataAccessService implements PersonDao
 
   @Override
 
-  public int insertPerson(UUID id, Person person)
+  public void insertPerson(UUID id, Person person)
   {
-    return 0;
+    jdbcTemplate.update("INSERT INTO person (id, name) VALUES (?, ?)", id, person.getName());
   }
 
   @Override
