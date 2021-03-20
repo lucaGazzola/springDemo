@@ -16,6 +16,12 @@
   <properties>
     <java.version>11</java.version>
   </properties>
+  <repositories>
+    <repository>
+      <id>palantir</id>
+      <url>https://dl.bintray.com/palantir/releases/</url>
+    </repository>
+  </repositories>
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -43,6 +49,13 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>com.palantir.docker.compose</groupId>
+      <artifactId>docker-compose-junit-jupiter</artifactId>
+      <version>1.5.0</version>
+    </dependency>
+
   </dependencies>
 
   <build>
