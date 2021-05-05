@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.acceptance;
 
 import com.example.demo.api.PersonController;
 import com.palantir.docker.compose.DockerComposeExtension;
@@ -13,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-public class DemoApplicationTests
+public class DemoApplicationAcceptanceTest
 {
 
   @LocalServerPort
@@ -31,7 +31,7 @@ public class DemoApplicationTests
   PersonController personController;
 
   @Test
-  public void simpleRequest()
+  public void emptyPeopleList()
   {
     assertThat(personController).isNotNull();
     assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/api/v1/person", String.class))
