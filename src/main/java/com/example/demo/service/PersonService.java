@@ -4,6 +4,7 @@ import com.example.demo.dao.PersonDao;
 import com.example.demo.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -26,6 +27,7 @@ public class PersonService
     personDao.insertPerson(person);
   }
 
+  @Cacheable("people")
   public List<Person> getAllPeople()
   {
     return personDao.selectAllPerople();
